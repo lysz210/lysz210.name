@@ -1,0 +1,125 @@
+body * {
+	box-sizing: border-box;
+}
+
+body > * {
+	position: relative;
+	min-width: 600px;
+	max-width: 800px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+a:hover {
+	text-decoration: underline;
+	font-style: italic;
+}
+a:active {
+	color: #FF0000;
+}
+a:focus {
+	color: #555555;
+	font-style: italic;
+}
+
+h1 {
+	font-size: 1.1em;
+}
+
+ul {
+	list-style: square;
+	padding-left: 1.5em;
+}
+
+#logo_auropass {
+	height: 5em;
+}
+
+header h1 {
+	font-variant: small-caps;
+	font-weight: 800;
+}
+
+section {
+	margin-top: 1em;
+	margin-bottom: 0.5em;
+}
+
+section h1 {
+	color: #343b8b;
+	font-weight: 600;
+	font-variant: small-caps;
+}
+
+dl {
+	position: relative;
+}
+section > dl > dt {
+	vertical-align: top;
+	text-align: right;
+	display: inline-block;
+	width: 34%;
+	
+	color: #343b8b;
+}
+
+section > dl > dd {
+	vertical-align: top;
+	display: inline-block;
+	width: 65%;
+}
+
+section > dl > * {
+	padding: 0.5em;
+}
+
+section > dl > dd:last-child {
+	border-bottom: 2px solid #343b8b;
+}
+
+#contatti_social dt {
+	display: inline;
+}
+#contatti_social dd {
+	display: inline;
+}
+#contatti_social dd:after {
+	content: "\A";
+    white-space: pre;
+}
+#contatti_social dt:after {
+	content: ": ";
+}
+
+#contatti_social .print_only {
+	display: none;
+}
+tfoot {
+	font-size: 0.8em;
+}
+
+#consenso_td p {
+	font-style: italic;
+	padding-top: 0.5em;
+}
+
+
+footer {
+	text-align: center;
+	padding-top: 1em;
+	padding-bottom: 1.5em;
+	color: #555555;
+}
+
+
+#nome, #cognome {
+	font-variant: small-caps;
+	font-weight: 600;
+}
+

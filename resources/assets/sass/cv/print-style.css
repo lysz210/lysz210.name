@@ -1,0 +1,17 @@
+
+nav {
+	display: none;
+}
+
+a:after {
+	content: " (" attr(href) ")";
+	font-style: italic;
+}
+
+section {
+	page-break-inside: avoid;
+}
+
+#contatti_social .print_only {
+	display: inline;
+}
