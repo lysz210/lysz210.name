@@ -1,3 +1,5 @@
+@import "../mayer_reset.css";
+
 body * {
 	box-sizing: border-box;
 }
@@ -100,6 +102,15 @@ section > dl > dd:last-child {
 #contatti_social .print_only {
 	display: none;
 }
+
+tbody {
+	td {
+		text-align: center;
+		&:first-child {
+			text-align: left;
+		}
+	}
+}
 tfoot {
 	font-size: 0.8em;
 }
@@ -122,4 +133,6 @@ footer {
 	font-variant: small-caps;
 	font-weight: 600;
 }
-
+@media print {
+	@import "print-style";
+}

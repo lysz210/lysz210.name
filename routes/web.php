@@ -12,14 +12,11 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('cv');
 });
 
-Route::post('/webhook', function (Request $req) {
-    if ($req->input('hub.mode') === 'subscribe' && $req->input('hub.verify_token') === 'sh_web_hook_key') {
-        return $req->input('hub.challenge');
-    } else {
-	throw new \Exception('Failed validation. Make sure the validation tokens match.');
-    }
+
+Route::get('cv', function () {
+    return view('cv');
 });
 
