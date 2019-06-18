@@ -1,8 +1,24 @@
 <section id="esperienze_professionali">
     <h1>Esperienze professionali</h1>
     <dl>
+        <dt>Occupazione attuale da Gennaio 2019</dt>
+        <dd>
+            <h2>Consulente informatico cliente principale <a href="https://www.reply.com/it/" alt="link al sito Reply" target="blank">Reply</a> di Silea</h2>
+            <p>
+                <a href="https://www.telematicainformatica.it/" alt="link al sito Telematica Informatica Srl" target="blank">Telematica Informatica Srl</a>,
+                Corso Rosselli 240, Torino 10141
+            </p>
+            <ul>
+                <li>Sviluppo front-end in Java</li>
+                <li>Tecnologie principali: Spring, Primefaces, sass, JBoss</li>
+                <li>Versioning con GitLab</li>
+            </ul>
+            <p class="settore">
+                Informatica
+            </p>
+        </dd>
         <dt>
-            Occupazione attuale iniziato nel 2016
+            Dal Agosto 2016 al Dicembre 2018
         </dt>
         <dd>
             <h2>Web developer</h2>
