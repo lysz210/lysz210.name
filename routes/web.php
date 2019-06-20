@@ -11,10 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return redirect('cv');
-});
 
+Route::view('/', 'home');
+
+Route::redirect('home', '/');
 
 Route::get('cv', function () {
     return view('cv');
