@@ -7,7 +7,7 @@
 		<meta name="author" content="Linyong Sun">
 		<meta name="keywords" content="curriculum vitae, cv, curriculum, Lingyong, Sun, Lingyong Sun"/>
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
 
 		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
 		<link rel="stylesheet" type="text/css" href="{{asset('css/cv/main_style.css')}}">
