@@ -14,41 +14,17 @@
         </dt>
         <dd>
             <dl id="contatti_social">
-                <dt>
-                    Twitter
-                </dt>
+                @foreach (json_decode(Storage::disk('public')->get('data/me/social-accounts.json')) as $social)
+                <dt>{{ $social->name }}</dt>
                 <dd>
-                    <a href="https://twitter.com/lysz210" target="blank">Lysz210</a>
+                    <a href="{{ $social->url }}">{{ $social->username }}</a>
                 </dd>
-                <dt>
-                    LinkedIn
-                </dt>
-                <dd>
-                    <a href="https://it.linkedin.com/in/lysz210" target="blank">Lingyong Sun</a>
-                </dd>
-                <dt>
-                    Github
-                </dt>
-                <dd>
-                    <a href="https://github.com/lysz210" alt="ling al profilo su Github" target="blank">Lysz210</a>
-                </dd>
-                <dt>
-                    Bitbucket
-                </dt>
-                <dd>
-                    <a href="https://bitbucket.org/lysz210/" alt="ling al profilo su Bitbucket" target="bland">Lysz210</a>
-                </dd>
+                @endforeach
                 <dt>
                     Skype
                 </dt>
                 <dd>
                     lysz210
-                </dd>
-                <dt>
-                    Facebook
-                </dt>
-                <dd>
-                    <a href="https://www.facebook.com/lysZ210" alt="link alla pagina su facebook" target="blank">Lysz210</a>
                 </dd>
                 <dt class="print_only">
                     Curriculum online
