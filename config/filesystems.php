@@ -55,6 +55,11 @@ return [
             'visibility' => 'public',
         ],
 
+        'data' => [
+            'driver' => 'local',
+            'root' => resource_path('assets/data'),
+        ],
+
         's3' => [
             'driver' => 's3',
             'key' => env('AWS_KEY'),

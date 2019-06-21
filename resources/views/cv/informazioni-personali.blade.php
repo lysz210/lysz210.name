@@ -14,7 +14,7 @@
         </dt>
         <dd>
             <dl id="contatti_social">
-                @foreach (json_decode(Storage::disk('public')->get('data/me/social-accounts.json')) as $social)
+                @foreach (json_decode(Storage::disk('data')->get('me/social-accounts.json')) as $social)
                 <dt>{{ $social->name }}</dt>
                 <dd>
                     <a href="{{ $social->url }}">{{ $social->username }}</a>

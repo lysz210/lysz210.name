@@ -29,7 +29,7 @@ mix.stylus('resources/assets/stylus/app.styl', 'public/css');
 // mix.combine(files, destination);
 // mix.babel(files, destination); <-- Identical to mix.combine(), but also includes Babel compilation.
 // mix.copy(from, to);
-// mix.copyDirectory(fromDir, toDir);
+mix.copyDirectory('resources/assets/data', 'public/data');
 // mix.minify(file);
 // mix.sourceMaps(); // Enable sourcemaps
 mix.version(); // Enable versioning.

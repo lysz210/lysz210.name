@@ -16,3 +16,7 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/data/me/social-accounts', function () {
+    return response(Storage::disk('data')->get('me/social-accounts.json'))->header('Content-type', 'application/json');
+});

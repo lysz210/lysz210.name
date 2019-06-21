@@ -47,7 +47,7 @@ export default {
   }),
   mounted() {
     console.log("Component mounted.");
-    from(this.$axios.get('/storage/data/me/social-accounts.json'), asyncScheduler)
+    from(this.$axios.get('/api/data/me/social-accounts'), asyncScheduler)
       .pipe(
         flatMap(response => response.data),
         map(item => of(item).pipe(delay(500))),
