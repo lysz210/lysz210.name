@@ -7,7 +7,7 @@
 		<meta name="author" content="Linyong Sun">
 		<meta name="keywords" content="curriculum vitae, cv, curriculum, Lingyong, Sun, Lingyong Sun"/>
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
 
 		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
 		<link rel="stylesheet" type="text/css" href="{{asset('css/cv/main_style.css')}}">
@@ -15,7 +15,10 @@
 
 @section('body')
 <header>
-	<h1><img id="logo_auropass" src="{{asset('images/europass_logo.jpg')}}" alt="logo europass" title="logo europass" />Curriculum Vitae</h1>
+	<h1>
+		<img id="logo_auropass" src="{{asset('images/europass-inline.svg')}}" alt="logo europass" title="logo europass" />
+		<span>Curriculum Vitae</span>
+	</h1>
 </header>
 
 <!--

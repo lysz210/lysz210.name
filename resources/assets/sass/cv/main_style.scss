@@ -1,5 +1,11 @@
 @import "../mayer_reset.css";
 
+@mixin mobile {
+	@media only screen and (max-width: 767.98px) {
+		@content;
+	}
+}
+
 body * {
 	box-sizing: border-box;
 }
@@ -7,6 +13,9 @@ body * {
 body > * {
 	position: relative;
 	min-width: 600px;
+	@include mobile() {
+		min-width: 480px;
+	}
 	max-width: 800px;
 	display: block;
 	margin-left: auto;
@@ -31,26 +40,39 @@ a:focus {
 }
 
 h1 {
-	font-size: 1.1em;
+	font-size: 1.1rem;
 }
 
 ul {
 	list-style: square;
-	padding-left: 1.5em;
+	padding-left: 1.5rem;
 }
 
 #logo_auropass {
-	height: 5em;
+	height: 5rem;
+	/*
+	 * posizionamento del logo
+	 * in modo che la scritta
+	 * curriculum sia sotto pass
+	 * il posizionamento relativo
+	 * non garantisce la centratura del gruppo
+	 */
+	margin-right: -6rem;
+    margin-bottom: -0.4rem;
 }
 
 header h1 {
 	font-variant: small-caps;
 	font-weight: 800;
+	text-align: right;
+	@include mobile() {
+		text-align: center;
+	}
 }
 
 section {
-	margin-top: 1em;
-	margin-bottom: 0.5em;
+	margin-top: 1rem;
+	margin-bottom: 0.5rem;
 }
 
 section h1 {
@@ -69,6 +91,7 @@ section > dl > dt {
 	width: 34%;
 	
 	color: #343b8b;
+
 }
 
 section > dl > dd {
@@ -78,7 +101,7 @@ section > dl > dd {
 }
 
 section > dl > * {
-	padding: 0.5em;
+	padding: 0.5rem;
 }
 
 section > dl > dd:last-child {
@@ -112,19 +135,19 @@ tbody {
 	}
 }
 tfoot {
-	font-size: 0.8em;
+	font-size: 0.8rem;
 }
 
 #consenso_td p {
 	font-style: italic;
-	padding-top: 0.5em;
+	padding-top: 0.5rem;
 }
 
 
 footer {
 	text-align: center;
-	padding-top: 1em;
-	padding-bottom: 1.5em;
+	padding-top: 1rem;
+	padding-bottom: 1.5rem;
 	color: #555555;
 }
 
@@ -136,3 +159,4 @@ footer {
 @media print {
 	@import "print-style";
 }
+
