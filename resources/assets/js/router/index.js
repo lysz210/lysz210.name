@@ -5,7 +5,7 @@ import routes from './routes'
 Vue.use(VueRouter)
 
 export default () => new VueRouter({
-    base: '/app',
+    base: '/',
     mode: 'history',
     routes
 })

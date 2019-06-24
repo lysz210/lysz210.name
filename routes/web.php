@@ -11,10 +11,10 @@
 |
 */
 
+Route::view('/cv', 'cv');
 
-Route::get('/app/{any?}', function () {
+Route::get('/{any?}', function () {
     return view('home');
 })->where('any', '.*');
 
-Route::view('cv', 'cv');
-
+// Route::redirect('/{any?}', '/app')->where('any', '.*');
