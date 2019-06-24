@@ -14,14 +14,14 @@
       </v-btn>
     </v-toolbar>
     <v-content>
-      <v-container fluid fill-height ma-0 pa-0>
+      <router-view></router-view>
+      <!-- <v-container fluid fill-height ma-0 pa-0>
         <v-layout fill-height row>
-          <iframe src="/cv" frameborder="0" style="width: 100%"></iframe>
         </v-layout>
-      </v-container>
+      </v-container> -->
     </v-content>
 
-    <v-footer color="blue-grey" class="white--text" app>
+    <v-footer color="blue-grey">
       <v-layout justify-center row wrap>
         <v-flex primary lighten-2 py-3 text-xs-center white--text xs12>
           &copy;2019
@@ -36,8 +36,10 @@
 <script>
 import { from, asyncScheduler, interval, of } from 'rxjs'
 import { flatMap, delay, map, concatAll } from 'rxjs/operators'
+import router from '../router'
 
 export default {
+  router: router(),
   data: () => ({
     drawer: null,
     drawerRight: null,
