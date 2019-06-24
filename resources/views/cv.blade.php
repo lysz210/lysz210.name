@@ -10,7 +10,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
 
 		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
-		<link rel="stylesheet" type="text/css" href="{{asset('css/cv/main_style.css')}}">
+		<link rel="stylesheet" type="text/css" href="{{ mix('css/cv/main_style.css') }}">
 @endsection
 
 @section('body')
