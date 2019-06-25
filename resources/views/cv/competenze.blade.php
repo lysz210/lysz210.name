@@ -80,7 +80,6 @@
                             Lato client
                             <ul>
                                 <li>Uso di librerie base. Jquery</li>
-                                <li>Uso di framework avanzati. Angular, principalmente Vuejs</li>
                                 <li>Comunicazione con Socket.io, ajax, rest API</li>
                                 <li>Pouchdb per l'uso di database in locate e in remote</li>
                             </ul>
@@ -94,19 +93,50 @@
                                 <li>Creazione librerie</li>
                             </ul>
                         </li>
+                        <li>
+                            Frameworks
+                            <ul>
+                                <li>Vuejs</li>
+                                <li>Quasarjs (Vuejs)</li>
+                                <li>Vuetify (Vuejs)</li>
+                                <li>Nuxt (Vuejs)</li>
+                                <li>Angular consonscienza base</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Librerie
+                            <ul>
+                                <li>PouchDB</li>
+                                <li>Axiosjs</li>
+                                <li>Rxjs</li>
+                                <li>Bookshelf</li>
+                                <li>lodash</li>
+                            </ul>
+                        </li>
                     </ul>		
                 </li>
                 <li>
                     Programmazione in PHP
                     <ul>
                         <li>Uso di composer, compresa la preparazione di repository</li>
-                        <li>Laravel ed altre librerie</li>
+                        <li>Framework
+                            <ul>
+                                <li>Laravel</li>
+                                <li>Zend Framework (solo moduli, principalmente Mail e DB)</li>
+                            </ul>
+                        </li>
                     </ul>
                 </li>
                 <li>
                     Creazione di siti in HTML/CSS
                 </li>
-                <li>Programmazione sass per la compilazione di css</li>
+                <li>Styling avanzato
+                    <ul>
+                        <li>SASS/SCSS</li>
+                        <li>Stylus</li>
+                        <li>Bootstrap</li>
+                    </ul>
+                </li>
                 <li>
                     Programmazione base in java
                 </li>
