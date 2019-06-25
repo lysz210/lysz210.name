@@ -20,7 +20,7 @@
                         <th> </th>
                         <th colspan="2">COMPRENSIONE</th>
                         <th colspan="2">PARLATO</th>
-                        <th>PRODUZIONE SCRITTA</th>
+                        <th>SCRITTO</th>
                     </tr>
                     <tr>
                         <th> </th>

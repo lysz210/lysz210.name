@@ -16,7 +16,7 @@
 @section('body')
 <header>
 	<h1>
-		<img id="logo_auropass" src="{{asset('images/europass-inline.svg')}}" alt="logo europass" title="logo europass" />
+		<img class="logo-auropass" src="{{asset('images/europass-inline.svg')}}" alt="logo europass" title="logo europass" />
 		<span>Curriculum Vitae</span>
 	</h1>
 </header>
