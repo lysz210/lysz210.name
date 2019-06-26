@@ -1,11 +1,7 @@
 <template>
-<v-container
-    id="scroll-target"
-    class="scroll"
->
+<v-container>
     <v-layout>
         <iframe
-            v-scroll:#scroll-target="onScroll"
             ref="externalWindow"
             :height="`${height}px`"
             :src="src" frameborder="0"

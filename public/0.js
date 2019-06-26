@@ -24,10 +24,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     src: {
@@ -66,19 +62,9 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "v-container",
-    { staticClass: "scroll", attrs: { id: "scroll-target" } },
     [
       _c("v-layout", [
         _c("iframe", {
-          directives: [
-            {
-              name: "scroll",
-              rawName: "v-scroll:#scroll-target",
-              value: _vm.onScroll,
-              expression: "onScroll",
-              arg: "#scroll-target"
-            }
-          ],
           ref: "externalWindow",
           staticStyle: { width: "100%" },
           attrs: {
