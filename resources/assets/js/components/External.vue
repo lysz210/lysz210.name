@@ -20,7 +20,7 @@
               <v-icon>fa-times</v-icon>
             </v-btn>
           </template>
-          <v-btn fab dark small color="green" @click="print">
+          <v-btn fab dark small color="green" href="/cv/pdf" target="_blank">
             <v-icon>fa-print</v-icon>
           </v-btn>
           <v-btn fab dark small color="indigo" :disabled="true">
