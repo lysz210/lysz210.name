@@ -177,6 +177,8 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        // add html 2 pdf for laravel snappy
+        Barryvdh\Snappy\ServiceProvider::class,
     ],
 
     /*
@@ -226,6 +228,9 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+        // Facades form laravel-snappy
+        'PDF' => Barryvdh\Snappy\Facades\SnappyPdf::class,
+        'SnappyImage' => Barryvdh\Snappy\Facades\SnappyImage::class,
     ],
 
 ];
