@@ -30,7 +30,7 @@
 
     <v-footer color="blue-grey">
       <v-layout justify-center row wrap>
-        <v-flex primary lighten-2 py-3 text-xs-center white--text xs12>
+        <v-flex text-xs-center white--text xs12>
           &copy;2019
           —
           <strong>Lingyong Sun</strong>
@@ -43,6 +43,7 @@
 <script>
 import { from, asyncScheduler, interval, of, BehaviorSubject, Subject } from 'rxjs'
 import { flatMap, delay, map, concatAll, delayWhen, tap, filter } from 'rxjs/operators'
+import { ajax } from 'rxjs/ajax'
 import router from '../router'
 import Velocity from 'velocity-animate'
 
@@ -57,7 +58,8 @@ export default {
     pool: []
   }),
   mounted() {
-    console.log("Component mounted.");
+    ajax.getJSON('/api/data/me/social-accounts')
+    .subscribe(console.log, console.error, console.log.bind(console, 'done'))
     from(this.$axios.get('/api/data/me/social-accounts'), asyncScheduler).pipe(map(a => a.data))
       .subscribe(
         socialsData => {
@@ -69,7 +71,6 @@ export default {
   methods: {
     enter (el, done) {
       Velocity(el, {opacity: 1}, {duration: 2000, complete: () => {
-        console.log('animation completed')
         if (this.pool.length)
           this.socials.push(this.pool.pop())
         done()

@@ -13,8 +13,11 @@
 
 Route::view('/cv', 'cv');
 
-Route::get('/{any?}', function () {
+Route::get('/{webBase?}/{any?}', function () {
     return view('home');
-})->where('any', '.*');
+})->where([
+    'webBase' => '^(?!api)\w*$',
+    'any' => '.*'
+]);
 
 // Route::redirect('/{any?}', '/app')->where('any', '.*');
