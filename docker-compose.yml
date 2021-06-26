@@ -1,12 +1,12 @@
 # For more information: https://laravel.com/docs/sail
 version: '3.7'
 services:
-    laravel.test:
+    website:
         build:
             context: ./docker/8.0
             args:
                 WWWGROUP: '${WWWGROUP}'
-        image: lysz210/website
+        image: lysz210/localesite
         ports:
             - '${APP_PORT:-80}:80'
         environment:
