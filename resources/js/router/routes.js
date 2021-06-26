@@ -4,5 +4,9 @@ export default [
         path: '/:lang',
         component: () => import('../components/External'),
         props: true
+    },
+    {
+        path: '*',
+        redirect: '/en'
     }
 ]
