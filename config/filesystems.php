@@ -47,6 +47,16 @@ return [
             'root' => resource_path('data'),
         ],
 
+        'en' => [
+            'driver' => 'local',
+            'root' => resource_path('lang/en')
+        ],
+
+        'it' => [
+            'driver' => 'local',
+            'root' => resource_path('lang/it')
+        ],
+
         's3' => [
             'driver' => 's3',
             'key' => env('AWS_ACCESS_KEY_ID'),

@@ -13,11 +13,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::prefix('cv')->group(function () {
-    Route::view('', 'cv');
-    Route::get('pdf', function () {
-        return PDF::loadView('cv', ['isPdf' => true])->download('CV-Lingyong-Sun.pdf');
+Route::middleware(['setlocale'])
+    ->prefix('{locale}')
+    -> group(function () {
+    Route::prefix('cv')->group(function () {
+        Route::view('', 'cv');
+        Route::get('pdf', function () {
+            return PDF::loadView('cv', ['isPdf' => true])->download('CV-Lingyong-Sun.pdf');
+        });
     });
+
+
 });
 
 Route::get('/{webBase?}/{any?}', function () {

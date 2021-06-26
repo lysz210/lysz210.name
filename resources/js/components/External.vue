@@ -20,7 +20,7 @@
               <v-icon v-else>fa-ellipsis-v</v-icon>
             </v-btn>
           </template>
-          <v-btn fab dark small color="green" href="/cv/pdf" target="_blank">
+          <v-btn fab dark small color="green" :href="pdfSrc" target="_blank">
             <v-icon>fa-print</v-icon>
           </v-btn>
           <v-btn fab dark small color="indigo" :disabled="true">
@@ -35,15 +35,23 @@
 <script>
 export default {
   props: {
-    src: {
+    lang: {
       type: String,
-      default: "/cv"
+      default: "/en"
     }
   },
   data() {
     return {
       fab: false
     };
+  },
+  computed: {
+      src() {
+          return `${this.lang}/cv`
+      },
+      pdfSrc () {
+          return `${this.src}/pdf`
+      }
   }
 };
 </script>

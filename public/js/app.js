@@ -2108,13 +2108,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ([{
   name: 'external',
-  path: '/',
+  path: '/:lang',
   component: function component() {
     return __webpack_require__.e(/*! import() */ "resources_js_components_External_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../components/External */ "./resources/js/components/External.vue"));
   },
-  props: function props(route) {
-    return route.query;
-  }
+  props: true
 }]);
 
 /***/ }),

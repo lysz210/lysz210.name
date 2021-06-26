@@ -47,15 +47,23 @@ __webpack_require__.r(__webpack_exports__);
 //
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: {
-    src: {
+    lang: {
       type: String,
-      "default": "/cv"
+      "default": "/en"
     }
   },
   data: function data() {
     return {
       fab: false
     };
+  },
+  computed: {
+    src: function src() {
+      return "".concat(this.lang, "/cv");
+    },
+    pdfSrc: function pdfSrc() {
+      return "".concat(this.src, "/pdf");
+    }
   }
 });
 
@@ -229,7 +237,7 @@ var render = function() {
                         dark: "",
                         small: "",
                         color: "green",
-                        href: "/cv/pdf",
+                        href: _vm.pdfSrc,
                         target: "_blank"
                       }
                     },

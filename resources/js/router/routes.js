@@ -1,8 +1,8 @@
 export default [
     {
         name: 'external',
-        path: '/',
+        path: '/:lang',
         component: () => import('../components/External'),
-        props: (route) => route.query
+        props: true
     }
 ]

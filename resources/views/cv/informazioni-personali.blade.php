@@ -1,8 +1,8 @@
 <section id="informazioni_personali">
-    <h1>Informazioni personali</h1>
+    <h1>{{__('cv.anagrafica.title')}}</h1>
     <dl>
         <dt>
-            Nome e Cognome
+            {{__('cv.anagrafica.nominativo.title')}}
         </dt>
         <dd>
             <p>
@@ -10,7 +10,7 @@
             </p>
         </dd>
         <dt>
-            Contatti social
+            {{__('cv.anagrafica.socials.title')}}
         </dt>
         <dd>
             <dl id="contatti_social">

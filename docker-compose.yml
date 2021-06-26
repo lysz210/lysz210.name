@@ -1,10 +1,9 @@
 # For more information: https://laravel.com/docs/sail
-version: '3'
+version: '3.7'
 services:
     laravel.test:
         build:
             context: ./docker/8.0
-            dockerfile: Dockerfile
             args:
                 WWWGROUP: '${WWWGROUP}'
         image: lysz210/website
@@ -13,8 +12,12 @@ services:
         environment:
             WWWUSER: '${WWWUSER}'
             LARAVEL_SAIL: 1
+        secrets:
+          - source: dotenv
+            target: /var/www/html/.env
         volumes:
             - '.:/var/www/html'
+        #     - '.:/app'ven
         networks:
             - sail
         depends_on:
@@ -48,3 +51,6 @@ networks:
 volumes:
     sailpgsql:
         driver: local
+secrets:
+  dotenv:
+    file: ./.env
