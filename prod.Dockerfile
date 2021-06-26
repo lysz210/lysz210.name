@@ -63,6 +63,8 @@ RUN composer install
 
 RUN yarn
 
+RUN yarn prod
+
 RUN chgrp -R sail storage
 RUN chmod -R g+rwx storage
 
