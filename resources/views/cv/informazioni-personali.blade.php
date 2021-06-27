@@ -9,6 +9,10 @@
                 <span id="nome">Lingyong</span> <span id="cognome">Sun</span>
             </p>
         </dd>
+        @if($withMail)
+        <dt>Email</dt>
+        <dd>{{ env('MAIL_PERSONAL') }}</dd>
+        @endif
         <dt>
             {{__('cv.anagrafica.socials.title')}}
         </dt>

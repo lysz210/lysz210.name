@@ -39,50 +39,58 @@ return [
         "title" => "Competenze informatiche",
         "list" => [
             [
-                "title" => "Database NoSQL",
+                "title" => "Database",
                 "content" => [
                     "CouchDB",
-                    "mongodb"
+                    "SQL - MySQL, OracleDb, PostgreSQL"
+                ]
+            ],
+            [
+                "title" => "Tools",
+                "content" => [
+                    "Git",
+                    "Jenkins",
+                    "TravisCI",
+                    "Docker - Mirantis",
+                    "Instana",
+                    "Splunk"
+                ]
+            ],
+            [
+                "title" => "Java 8+",
+                "content" => [
+                    "Intermediate/advanced programmer",
+                    "Spring: Springboot, PrimeFaces",
+                    "SonarLing",
+                    [
+                        "title" => "Testing",
+                        "content" => [
+                            "JUnit 5",
+                            "Assertj",
+                            "Contract test with Pact",
+                            "Performance test with Gatling"
+                        ]
+                    ]
                 ]
             ],
             [
                 "title" => "Programmazione in javascript",
                 "content" => [
-                    [
-                        "title" => "Lato client",
-                        "content" => [
-                            "Uso di librerie base. Jquery",
-                            "Comunicazione con Socket.io, ajax, rest API",
-                            "Pouchdb per l'uso di database in locate e in remote",
-                        ]
-                    ],
-                    [
-                        "title" => "Lato server(Nodejs)",
-                        "content" => [
-                            "reazione base di server http",
-                            "reazione di script generici per cron",
-                            "estione connessione a DBMS",
-                            "reazione librerie"
-                        ]
-                    ],
+                    "Uso di librerie base. Jquery",
+                    "Comunicazione con Socket.io, ajax, rest API",
+                    "Pouchdb per l'uso di database in locate e in remote",
+                    "Creazione base di server http con Koa.js",
+                    "Script cron per processare dati con Rxjs",
+                    "Connessione a DBMS e Database distribuito NoSQL CouchDB",
                     [
                         "title" => "Frameworks",
                         "content" => [
+                            "Electron",
                             "Vuejs",
-                            "Quasarjs (Vuejs)",
-                            "Vuetify (Vuejs)",
-                            "Nuxt (Vuejs)",
-                            "Angular consonscienza base"
-                        ]
-                    ],
-                    [
-                        "title" => "Librerie",
-                        "content" => [
-                            "PouchDB",
-                            "Axiosjs",
-                            "Rxjs",
-                            "Bookshelf",
-                            "lodash"
+                            "Quasarjs",
+                            "Vuetify",
+                            "Nuxt",
+                            "Angular"
                         ]
                     ],
                 ]
@@ -90,7 +98,8 @@ return [
             [
                 "title" => "Programmazione in PHP",
                 "content" => [
-                    "Uso di composer, compresa la preparazione di repository",
+                    "Livello avanzato anche OOP",
+                    "Uso di composer",
                     [
                         "title" => "Frameworks",
                         "content" => [
@@ -103,25 +112,15 @@ return [
             [
                 "title" => "Creazione di siti in HTML/CSS",
                 "content" => [
-                    [
-                        "title" => "Styling avanzato",
-                        "content" => [
-                            "SASS/SCSS",
-                            "Stylus",
-                            "Bootstrap",
-                        ]
-                    ]
+                    "html5",
+                    "SASS/SCSS",
+                    "Stylus",
+                    "Bootstrap",
                 ]
             ],
-            "Programmazione base in java",
-            "Programmazione base in python",
-            "Conoscenza basi di Django",
-            "Conoscenza basilare di Assembler",
-            "Creazione e gestioni basi di dati in PostgreSQL/MySQL",
-            "Programmazione base di linguaggio funzionale (CaML)",
-            "Programmazione base di C",
-            "Conoscenze basilari di R",
-            "Buona padronanza degli strumenti Microsoft Office",
+            "Markdown",
+            "Python",
+            "Microsoft Office",
         ]
     ],
     "patente" => [

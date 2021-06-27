@@ -60,6 +60,17 @@ h1 {
 ul {
 	list-style: square;
 	padding-left: 1.5rem;
+    ul {
+        ul > li {
+            display: inline;
+            &::after {
+                content: '—';
+            }
+            &:last-child::after {
+                content: none;
+            }
+        }
+    }
 }
 
 
@@ -134,7 +145,7 @@ section {
 				padding-left: 1.2rem;
 			}
 		}
-	
+
 	}
 }
 

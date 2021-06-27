@@ -54,7 +54,7 @@
             {{ __('cv.competenze.patente.title') }}
         </dt>
         <dd>
-            {{ __('cv.competenze.patente.title') }}
+            {{ __('cv.competenze.patente.content') }}
         </dd>
     </dl>
 </section>

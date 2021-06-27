@@ -33,7 +33,7 @@ if (!empty($isPdf) && $isPdf) {
 <!--
 informazioni personali
 -->
-@component('cv.informazioni-personali')
+@component('cv.informazioni-personali', ['withMail' => $withMail])
 @endcomponent
 <!-- fine informazioni personali -->
 
@@ -54,16 +54,12 @@ esperienze lavorative
 @endcomponent
 <!-- fine competenze -->
 
+@if(Lang::has('cv.cdt'))
 <section id="consenso_td">
 	<h1>
 		{{ __('cv.cdt.title') }}
 	</h1>
 	<p>{{ __('cv.cdt.content') }}</p>
 </section>
-
-<footer>
-	<p>
-		&copy; Copyright  by Linyong Sun
-	</p>
-</footer>
+@endif
 @endsection

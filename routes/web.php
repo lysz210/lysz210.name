@@ -17,13 +17,13 @@ Route::middleware(['setlocale'])
     ->prefix('{locale}')
     -> group(function () {
     Route::prefix('cv')->group(function () {
-        Route::view('', 'cv');
+        Route::get('', function () {
+            return view('cv', ['withMail' => filter_var(request('withMail', false), FILTER_VALIDATE_BOOLEAN)]);
+        });
         Route::get('pdf', function () {
-            return PDF::loadView('cv', ['isPdf' => true])->download('CV-Lingyong-Sun.pdf');
+            return PDF::loadView('cv', ['isPdf' => true, 'withMail' => true])->download('CV-Lingyong-Sun.pdf');
         });
     });
-
-
 });
 
 Route::get('/{webBase?}/{any?}', function () {

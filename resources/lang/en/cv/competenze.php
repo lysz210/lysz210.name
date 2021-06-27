@@ -1,32 +1,32 @@
 <?php
 $tmpfoot = <<<FOOT
-Livelli: A1/2 Livello base - B1/2 Livello intermedio - C1/2 Livello avanzato
+Levels: A1/2: Basic user - B1/2: Independent user - C1/2 Proficient user
 <br />
-Quadro Comune Europeo di Riferimento delle Lingue
+Common European Framework of Reference for Languages
 FOOT;
 return [
-    "title" => "Competenze personali",
+    "title" => "Personal skills",
     "lingue" => [
         "madre" => [
-            "title" => "Lingua madre",
-            "content" => "Italiano"
+            "title" => "Mother tongue",
+            "content" => "Italian"
         ],
         "altre" => [
-            "title" => "Altre lingue",
+            "title" => "Other languages",
             "cols" => [
-                "comprensione" => "Comprensione",
-                "parlato" => "Parlato",
-                "scritto" => "Scritto"
+                "comprensione" => "Understanding",
+                "parlato" => "Speaking",
+                "scritto" => "Writing"
             ],
             "list" => [
                 "inglese" => [
-                    "name" => "Inglese",
+                    "name" => "English",
                     "comprensione" => "B2",
                     "parlato" => "B2",
                     "scritto" => "B2"
                 ],
                 "francese" => [
-                    "name" => "francese",
+                    "name" => "French",
                     "comprensione" => "A1",
                     "parlato" => "A1",
                     "scritto" => "A1"
@@ -36,96 +36,94 @@ return [
         ]
     ],
     "informatiche" => [
-        "title" => "Competenze informatiche",
+        "title" => "IT skills",
         "list" => [
             [
-                "title" => "Database NoSQL",
+                "title" => "Database",
                 "content" => [
                     "CouchDB",
-                    "mongodb"
+                    "SQL - MySQL, OracleDb, PostgreSQL"
                 ]
             ],
             [
-                "title" => "Programmazione in javascript",
+                "title" => "Tools",
                 "content" => [
-                    [
-                        "title" => "Lato client",
-                        "content" => [
-                            "Uso di librerie base. Jquery",
-                            "Comunicazione con Socket.io, ajax, rest API",
-                            "Pouchdb per l'uso di database in locate e in remote",
-                        ]
-                    ],
-                    [
-                        "title" => "Lato server(Nodejs)",
-                        "content" => [
-                            "reazione base di server http",
-                            "reazione di script generici per cron",
-                            "estione connessione a DBMS",
-                            "reazione librerie"
-                        ]
-                    ],
-                    [
-                        "title" => "Frameworks",
-                        "content" => [
-                            "Vuejs",
-                            "Quasarjs (Vuejs)",
-                            "Vuetify (Vuejs)",
-                            "Nuxt (Vuejs)",
-                            "Angular consonscienza base"
-                        ]
-                    ],
-                    [
-                        "title" => "Librerie",
-                        "content" => [
-                            "PouchDB",
-                            "Axiosjs",
-                            "Rxjs",
-                            "Bookshelf",
-                            "lodash"
-                        ]
-                    ],
+                    "Git",
+                    "Jenkins",
+                    "TravisCI",
+                    "Docker - Mirantis",
+                    "Instana",
+                    "Splunk"
                 ]
             ],
             [
-                "title" => "Programmazione in PHP",
+                "title" => "Java 8+",
                 "content" => [
-                    "Uso di composer, compresa la preparazione di repository",
+                    "Intermediate/advanced user",
+                    "Spring: Springboot, PrimeFaces",
+                    "SonarLing",
                     [
-                        "title" => "Frameworks",
+                        "title" => "Testing",
                         "content" => [
-                            "Laravel",
-                            "Zend Framework (solo moduli, principalmente Mail e DB)"
-                        ]
-                    ],
-                ]
-            ],
-            [
-                "title" => "Creazione di siti in HTML/CSS",
-                "content" => [
-                    [
-                        "title" => "Styling avanzato",
-                        "content" => [
-                            "SASS/SCSS",
-                            "Stylus",
-                            "Bootstrap",
+                            "JUnit 5",
+                            "Assertj",
+                            "Contract test with Pact",
+                            "Performance test with Gatling"
                         ]
                     ]
                 ]
             ],
-            "Programmazione base in java",
-            "Programmazione base in python",
-            "Conoscenza basi di Django",
-            "Conoscenza basilare di Assembler",
-            "Creazione e gestioni basi di dati in PostgreSQL/MySQL",
-            "Programmazione base di linguaggio funzionale (CaML)",
-            "Programmazione base di C",
-            "Conoscenze basilari di R",
-            "Buona padronanza degli strumenti Microsoft Office",
+            [
+                "title" => "JavaScript programming",
+                "content" => [
+                    "Socket.io, ajax, rest API",
+                    "PouchDB for distributed database with CouchDB",
+                    "Basic http server with Koa.js",
+                    "Cron script with Rxjs for data processing",
+                    "DBMS connection and CouchDB for distributed NoSQL Database",
+                    [
+                        "title" => "Frameworks",
+                        "content" => [
+                            "Electron",
+                            "Vuejs",
+                            "Quasarjs",
+                            "Vuetify",
+                            "Nuxt",
+                            "Angular"
+                        ]
+                    ],
+                ]
+            ],
+            [
+                "title" => "PHP Programming",
+                "content" => [
+                    "Advanced user including OOP",
+                    "Composer",
+                    [
+                        "title" => "Frameworks",
+                        "content" => [
+                            "Laravel",
+                            "Zend Framework (only Mail and DB modules)"
+                        ]
+                    ],
+                ]
+            ],
+            [
+                "title" => "HTML/CSS",
+                "content" => [
+                    "html5",
+                    "SASS/SCSS",
+                    "Stylus",
+                    "Bootstrap",
+                ]
+            ],
+            "Markdown",
+            "Python",
+            "Microsoft Office",
         ]
     ],
     "patente" => [
-        "title" => "Patende di guida",
+        "title" => "Driving licence",
         "content" => "B"
     ]
 ];
