@@ -56,9 +56,9 @@ esperienze lavorative
 
 <section id="consenso_td">
 	<h1>
-		Consenso al trattamento dei dati
+		{{ __('cv.cdt.title') }}
 	</h1>
-	<p>Autorizzo il trattamento dei miei dati personali, ai sensi del D.lgs. 196 del 30 giugno 2003</p>
+	<p>{{ __('cv.cdt.content') }}</p>
 </section>
 
 <footer>
