@@ -8,11 +8,13 @@
             <p>
                 {!! $esperienza['azienda'] !!}
             </p>
+            @isset($esperienza['attivita'])
             <ul>
             @foreach($esperienza['attivita'] as $attivita)
                 <li>{{ $attivita }}</li>
             @endforeach
             </ul>
+            @endisset
             <p class="settore">
                 {{ $esperienza['settore'] }}
             </p>
