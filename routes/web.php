@@ -21,7 +21,7 @@ Route::middleware(['setlocale'])
             return view('cv', ['withMail' => filter_var(request('withMail', false), FILTER_VALIDATE_BOOLEAN)]);
         });
         Route::get('pdf', function () {
-            return PDF::loadView('cv', ['isPdf' => true, 'withMail' => true])->download('CV-Lingyong-Sun.pdf');
+            return PDF::loadView('cv', ['isPdf' => true, 'withMail' => true])->download('CV-'.app()->currentLocale().'-Lingyong-Sun.pdf');
         });
     });
 });
