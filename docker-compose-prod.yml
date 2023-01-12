@@ -1,8 +1,0 @@
-version: '3.7'
-
-services:
-  website:
-      build:
-        context: .
-        dockerfile: prod.Dockerfile
-      image: lysz210/website

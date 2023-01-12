@@ -1,7 +1,0 @@
-docker
-node_modules
-vendor
-.env
-*.lock
-Dockerfile
-docker-compose.yml
