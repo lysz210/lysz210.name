@@ -2,7 +2,6 @@
   <v-app>
     <v-app-bar app color="blue-grey" dark>
       <v-toolbar-title>Lysz210</v-toolbar-title>
-      <v-icon>fa-solid fa-user</v-icon>
       <v-spacer></v-spacer>
       <transition-group name="fade" @enter="enter">
         <v-btn
@@ -32,3 +31,8 @@
     </v-footer>
   </v-app>
 </template>
+<style>
+html {
+  overflow-y: auto;
+}
+</style>
