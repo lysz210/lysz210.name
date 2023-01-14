@@ -4,5 +4,10 @@ export default defineNuxtConfig({
         head: {
             title: 'Lysz210'
         }
+    },
+    vite: {
+        ssr: {
+            noExternal: ['vuetify']
+        }
     }
 })
