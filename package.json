@@ -2,16 +2,16 @@
     "name": "lysz210.name",
     "main": "index.ts",
     "private": true,
-  "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
-  },
+    "scripts": {
+        "build": "nuxt build",
+        "dev": "nuxt dev",
+        "generate": "nuxt generate",
+        "preview": "nuxt preview",
+        "postinstall": "nuxt prepare"
+    },
     "devDependencies": {
-        "@types/node": "^14",
         "@fortawesome/fontawesome-free": "^6.2.1",
+        "@types/node": "^14",
         "nuxt": "3.0.0",
         "sass": "^1.57.1",
         "sass-loader": "10",
@@ -19,8 +19,9 @@
         "vuetify": "^3.1.1"
     },
     "dependencies": {
-        "@pulumi/pulumi": "^3.0.0",
         "@pulumi/aws": "^5.0.0",
-        "@pulumi/awsx": "^1.0.0"
+        "@pulumi/awsx": "^1.0.0",
+        "@pulumi/pulumi": "^3.0.0",
+        "rxjs": "^7.8.0"
     }
 }
