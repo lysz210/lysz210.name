@@ -3,7 +3,8 @@
     <v-app-bar app color="blue-grey" dark>
       <v-toolbar-title>Lysz210</v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-btn
+      <transition-group name="fade">
+        <v-btn
         v-for="social in socials"
         :key="social.name"
         :href="social.url"
@@ -16,11 +17,9 @@
           :style="{ color: social.color || 'black' }"
         >{{ social.icon }}</v-icon>
       </v-btn>
-      <!-- <transition-group name="fade" @enter="enter">
-        
-      </transition-group> -->
+      </transition-group>
     </v-app-bar>
-    <v-main><v-container><slot></slot></v-container></v-main>
+    <v-main><slot></slot></v-main>
     <v-footer app color="blue-grey">
       <v-row justify="center">
         <v-col class="py-4 text-center white--text">
@@ -38,7 +37,7 @@ html {
 </style>
 <script>
 import { ajax } from 'rxjs/ajax'
-import { map } from 'rxjs/operators'
+import { mergeMap } from 'rxjs/operators'
 
 export default {
   data: () => {
@@ -53,10 +52,12 @@ export default {
       crossDomain: true,
       withCredentials: false
     })
-    .pipe(map(response => response?.response))
+    .pipe(
+      mergeMap(response => response?.response)
+    )
     .subscribe({
-      next: (socialsData) => {
-        this.socials.push(...socialsData)
+      next: (element) => {
+        this.socials.push(element)
       }
     })
   }
