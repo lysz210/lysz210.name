@@ -186,6 +186,3 @@ dist
 *.log*
 .nitro
 .output
-
-# pulumi
-/bin/
