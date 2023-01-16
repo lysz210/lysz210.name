@@ -36,8 +36,9 @@ html {
 }
 </style>
 <script>
+import { of } from 'rxjs'
 import { ajax } from 'rxjs/ajax'
-import { mergeMap } from 'rxjs/operators'
+import { mergeMap, concatMap, delay } from 'rxjs/operators'
 
 export default {
   data: () => {
@@ -53,7 +54,8 @@ export default {
       withCredentials: false
     })
     .pipe(
-      mergeMap(response => response?.response)
+      mergeMap(response => response?.response),
+      concatMap(element => of(element).pipe(delay(700)))
     )
     .subscribe({
       next: (element) => {
