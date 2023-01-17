@@ -10,5 +10,8 @@ export default defineNuxtConfig({
         ssr: {
             noExternal: ['vuetify']
         }
+    },
+    generate: {
+        routes: [ '/en', '/it' ]
     }
 })
