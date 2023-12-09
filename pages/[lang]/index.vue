@@ -35,7 +35,7 @@
             return this.$route?.params?.lang || 'en'
         },
         src() {
-            return `https://cv.lysz210.name/${this.lang}`
+            return `http://cv.lysz210.name.s3-website.eu-south-1.amazonaws.com/${this.lang}`
         },
         pdfSrc () {
             return `${this.src}/CV_lingyong_sun.pdf`

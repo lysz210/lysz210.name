@@ -48,7 +48,7 @@ export default {
   },
   mounted() {
     ajax({
-      url: "https://cv.lysz210.name/me/social-accounts.json",
+      url: "http://cv.lysz210.name.s3-website.eu-south-1.amazonaws.com/me/social-accounts.json",
       method: 'GET',
       crossDomain: true,
       withCredentials: false
