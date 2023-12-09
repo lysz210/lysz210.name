@@ -42,13 +42,25 @@ import { mergeMap, concatMap, delay } from 'rxjs/operators'
 
 export default {
   data: () => {
+    const {
+      public: {
+        cvBasePath: basePath,
+        meSocialAccounts: socialAccounts
+      }
+    } = useRuntimeConfig()
     return {
+      cv: {
+        basePath
+      },
+      me: {
+        socialAccounts
+      },
       socials: [],
     }
   },
   mounted() {
     ajax({
-      url: "http://cv.lysz210.name.s3-website.eu-south-1.amazonaws.com/me/social-accounts.json",
+      url: `${this.cv.basePath}${this.me.socialAccounts}`,
       method: 'GET',
       crossDomain: true,
       withCredentials: false
