@@ -8,7 +8,7 @@ export default defineNuxtConfig({
     },
     runtimeConfig: {
         public: {
-            cvBasePath: 'http://cv.lysz210.name.s3-website.eu-south-1.amazonaws.com',
+            cvBasePath: 'https://cv.lysz210.name',
             cvPdf: '/CV_lingyong_sun.pdf',
             meSocialAccounts: '/me/social-accounts.json'
         }
