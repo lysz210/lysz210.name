@@ -60,7 +60,7 @@ export default {
   },
   mounted() {
     ajax({
-      url: `${this.cv.basePath}${this.me.socialAccounts}`,
+      url: `${this.cv.basePath}/api/${this.$route?.params?.lang || 'en'}${this.me.socialAccounts}`,
       method: 'GET',
       crossDomain: true,
       withCredentials: false
