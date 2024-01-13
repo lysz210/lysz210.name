@@ -10,7 +10,7 @@ export default defineNuxtConfig({
         public: {
             cvBasePath: 'https://cv.lysz210.name',
             cvPdf: '/CV_lingyong_sun.pdf',
-            meSocialAccounts: '/me/social-accounts.json'
+            meSocialAccounts: '/api/me/social-accounts'
         }
     },
     vite: {
