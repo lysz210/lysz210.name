@@ -40,7 +40,7 @@ export default {
       return `${this.cv.basePath}/${this.lang}`
     },
     pdfSrc() {
-      return `${this.src}${this.cv.pdf}`
+      return `https://lysz210.github.io/profile/i18n/${this.lang}/cv.pdf`
     }
   }
 };
