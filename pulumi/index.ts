@@ -1,18 +1,11 @@
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
-import * as awsx from "@pulumi/awsx";
 import * as glob from 'glob';
 import * as mime from 'mime';
-import { remote } from '@pulumi/command'
-import { Output } from "@pulumi/pulumi";
-import { readFileSync } from "fs";
-import * as md5 from "md5";
 
 const configs = new pulumi.Config();
 const org = pulumi.getOrganization();
 const stack = pulumi.getStack();
-
-const traefikRef = new pulumi.StackReference(`${org}/traefik.lysz210.name/${stack}`)
 
 // Create an AWS resource (S3 Bucket)
 const PublicRead = aws.s3.CannedAcl.PublicRead
@@ -56,27 +49,6 @@ glob.sync('**/*', {
         acl: PublicRead,
         contentType: mimeType || undefined
     })
-})
-
-interface SshConnection {
-    user: Output<string>;
-    host: Output<string>;
-}
-// add suffix in name to ensure trigger changes
-// on file channge.
-// This is a temporary solution, need a proper
-// change detection on contente in resource log
-const treafikFilePath = './website-traefik.yaml';
-const hash = md5(readFileSync(treafikFilePath));
-const connection = traefikRef.requireOutput('connection') as Output<SshConnection>
-const cvTraefik = new remote.CopyFile(`traefik-${hash}`, {
-    connection: {
-        user: connection.user,
-        host: connection.host,
-        privateKey: configs.requireSecret('awsMiPem')
-    },
-    localPath: treafikFilePath,
-    remotePath: pulumi.interpolate `${traefikRef.requireOutput('dynamicConfigsPath')}/website.yaml`
 })
 
 // Export the name of the bucket
