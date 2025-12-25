@@ -10,18 +10,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v6
       - name: Compile assets
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v6
         with:
-          node-version: '18.x'
+          node-version: '24.x'
       - run: npm ci
       - run: npm run generate
 
       - name: Pulumi dependences
         working-directory: ./pulumi
         run: npm ci
-      - uses: pulumi/actions@v4
+      - uses: pulumi/actions@v6
         with:
           command: up
           stack-name: lysz210/lysz210.name/dev
