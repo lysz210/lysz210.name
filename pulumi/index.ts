@@ -1,7 +1,7 @@
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
-import * as glob from 'glob';
-import * as mime from 'mime';
+import { glob } from 'glob';
+import mime from 'mime';
 
 const configs = new pulumi.Config();
 const org = pulumi.getOrganization();
@@ -10,26 +10,38 @@ const stack = pulumi.getStack();
 // Create an AWS resource (S3 Bucket)
 const PublicRead = aws.s3.CannedAcl.PublicRead
 const logsBucket = new aws.s3.Bucket("logs.lysz210.name")
+const logBucketAcl = new aws.s3.BucketAcl("logs.lysz210.name-bucketAcl", {
+    bucket: logsBucket.id,
+    acl: aws.s3.CannedAcl.LogDeliveryWrite
+});
 const bucket = new aws.s3.Bucket("lysz210.name", {
-    bucket: 'lysz210.name',
-    acl: PublicRead,
-    website: {
-        indexDocument: "index.html",
-        routingRules: [
-            {
-                Condition: {
-                    HttpErrorCodeReturnedEquals: '404'
-                },
-                Redirect: {
-                    ReplaceKeyWith: '404.html'
-                }
-            }
-        ]
+    bucket: 'lysz210.name'
+});
+
+const bucketLogging = new aws.s3.BucketLogging("lysz210.name-bucketLogging", {
+    bucket: bucket.id,
+    targetBucket: logsBucket.id,
+    targetPrefix: 'log/'
+});
+
+const bucketAcl = new aws.s3.BucketAcl("lysz210.name-bucketAcl", {
+    bucket: bucket.id,
+    acl: PublicRead
+});
+
+const websiteConfiguration = new aws.s3.BucketWebsiteConfiguration("lysz210.name-websiteConfiguration", {
+    bucket: bucket.id,
+    indexDocument: {
+        suffix: "index.html"
     },
-    loggings: [
+    routingRules: [
         {
-            targetBucket: logsBucket.id,
-            targetPrefix: 'log/'
+            condition: {
+                httpErrorCodeReturnedEquals: '404'
+            },
+            redirect: {
+                replaceKeyWith: '404.html'
+            }
         }
     ]
 });
@@ -53,4 +65,4 @@ glob.sync('**/*', {
 
 // Export the name of the bucket
 export const bucketName = bucket.id;
-export const websiteEndpoint = bucket.websiteEndpoint;
+export const websiteEndpoint = websiteConfiguration.websiteEndpoint;
