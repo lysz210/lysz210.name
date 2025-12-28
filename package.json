@@ -1,4 +1,10 @@
 {
+  "name": "lysz210.name",
+  "engines": {
+    "node": ">=24.0.0 <25.0.0",
+    "npm": ">=11.0.0 <12.0.0"
+  },
+  "type": "module",
   "private": true,
   "scripts": {
     "build": "nuxt build",
@@ -7,13 +13,26 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
+  "dependencies": {
+    "@nuxt/eslint": "^1.12.1",
+    "@nuxt/hints": "^1.0.0-alpha.5",
+    "eslint": "^9.39.2",
+    "lodash": "^4.17.21",
+    "nuxt": "^4.2.2",
+    "rxjs": "^7.8.2",
+    "vue": "^3.5.26",
+    "vue-router": "^4.6.4"
+  },
   "devDependencies": {
-    "@fortawesome/fontawesome-free": "^6.2.1",
-    "nuxt": "^3.12.4",
-    "rxjs": "^7.8.1",
-    "sass": "^1.83.0",
-    "sass-loader": "^10.5.2",
-    "vite-plugin-vuetify": "^1.0.2",
-    "vuetify": "^3.7.6"
+    "@fortawesome/fontawesome-free": "^7.1.0",
+    "@fortawesome/fontawesome-svg-core": "^7.1.0",
+    "@fortawesome/free-brands-svg-icons": "^7.1.0",
+    "@fortawesome/free-regular-svg-icons": "^7.1.0",
+    "@fortawesome/free-solid-svg-icons": "^7.1.0",
+    "@fortawesome/vue-fontawesome": "^3.1.2",
+    "@pinia/nuxt": "^0.11.3",
+    "@types/lodash": "^4.17.21",
+    "vite-plugin-vuetify": "^2.1.2",
+    "vuetify": "^3.11.5"
   }
 }

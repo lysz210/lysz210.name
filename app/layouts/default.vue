@@ -35,45 +35,37 @@ html {
   overflow-y: auto;
 }
 </style>
-<script>
+
+<script setup lang="ts">
 import { of } from 'rxjs'
 import { ajax } from 'rxjs/ajax'
-import { mergeMap, concatMap, delay } from 'rxjs/operators'
+import { mergeMap, concatMap, delay, filter } from 'rxjs/operators'
 
-export default {
-  data: () => {
-    const {
-      public: {
-        cvBasePath: basePath,
-        meSocialAccounts: socialAccounts
-      }
-    } = useRuntimeConfig()
-    return {
-      cv: {
-        basePath
-      },
-      me: {
-        socialAccounts
-      },
-      socials: [],
-    }
-  },
-  mounted() {
-    ajax({
-      url: `${this.cv.basePath}/api/${this.$route?.params?.lang || 'en'}${this.me.socialAccounts}`,
-      method: 'GET',
-      crossDomain: true,
-      withCredentials: false
-    })
-    .pipe(
-      mergeMap(response => response?.response),
-      concatMap(element => of(element).pipe(delay(700)))
-    )
-    .subscribe({
-      next: (element) => {
-        this.socials.push(element)
-      }
-    })
+const {
+  public: {
+    cvBasePath: basePath,
+    meSocialAccounts: socialAccounts
   }
-}
+} = useRuntimeConfig()
+
+const socials = ref<Array<any>>([])
+
+onMounted(() => {
+  ajax({
+    url: `${basePath}/api/${useRoute()?.params?.lang || 'en'}${socialAccounts}`,
+    method: 'GET',
+    crossDomain: true,
+    withCredentials: false
+  })
+  .pipe(
+    filter(response => !!response?.response),
+    mergeMap((response: any) => response.response),
+    concatMap(element => of(element).pipe(delay(700)))
+  )
+  .subscribe({
+    next: (element) => {
+      socials.value.push(element)
+    }
+  })
+})
 </script>

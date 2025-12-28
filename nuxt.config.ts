@@ -1,7 +1,31 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-export default defineNuxtConfig({
-  ssr: false,
+import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 
+export default defineNuxtConfig({
+  compatibilityDate: '2025-07-15',
+  devtools: { enabled: true },
+  modules: [
+    '@nuxt/eslint',
+    '@nuxt/hints',
+    '@pinia/nuxt',
+  ],
+  nitro: {
+    prerender: {
+      routes: ['/it', '/en']
+    }
+  },
+  build: {
+    transpile: ['vuetify'],
+  },
+  vite: {
+    plugins: [vuetify({ autoImport: true })],
+    vue: {
+      template: {
+        transformAssetUrls
+      }
+    }
+  },
+  ssr: false,
   app: {
       head: {
           title: 'Lysz210'
@@ -16,15 +40,4 @@ export default defineNuxtConfig({
       }
   },
 
-  vite: {
-      ssr: {
-          noExternal: ['vuetify']
-      }
-  },
-
-  generate: {
-      routes: [ '/en', '/it' ]
-  },
-
-  compatibilityDate: '2024-12-30'
 })
